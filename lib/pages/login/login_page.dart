@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:projeto_estagio/firebase_operations/auth_operations.dart';
+import 'package:projeto_estagio/pages/signup/signup_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -50,6 +52,22 @@ class _LoginPageState extends State<LoginPage> {
                 child: Center(child: Text("Submit")),
               ),
             ),
+            RichText(
+                text: TextSpan(
+              text: "Don't have an account yet? ",
+              style: TextStyle(color: Colors.black),
+              children: [
+                TextSpan(
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.of(context).pushNamed('/signup');
+                      },
+                    text: 'Sign up',
+                    style: const TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.blue)),
+              ],
+            ))
           ],
         ),
       ),

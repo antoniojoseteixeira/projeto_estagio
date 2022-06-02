@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:projeto_estagio/firebase_operations/auth_operations.dart';
+import 'package:projeto_estagio/pages/home/home_success.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
                   } else if (snapshot.hasError) {
                     return const Center(child: Text("Error"));
                   } else if (snapshot.hasData) {
-                    return const HomePage();
+                    return HomeSuccess();
                   }
                   return const CircularProgressIndicator();
                 })),
