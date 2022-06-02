@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:projeto_estagio/pages/home_page.dart';
-import 'package:projeto_estagio/pages/login_page.dart';
+import 'package:projeto_estagio/pages/home/home_page.dart';
+import 'package:projeto_estagio/pages/login/login_page.dart';
 
 class Routes extends StatelessWidget {
   const Routes({Key? key}) : super(key: key);
@@ -17,16 +17,19 @@ class Routes extends StatelessWidget {
                 stream: FirebaseAuth.instance.authStateChanges(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    return HomePage();
+                    return const HomePage();
                   } else {
-                    return LoginPage();
+                    return const LoginPage();
                   }
                 });
           });
         }
-        return MaterialPageRoute(builder: (context) {
-          return LoginPage();
-        });
+
+        if (settings.name == '/signup') {
+          return MaterialPageRoute(builder: (context) {
+            return Container();
+          });
+        }
       },
     );
   }

@@ -1,7 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:projeto_estagio/firebase_operations/auth_operations.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -42,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             ElevatedButton(
               onPressed: () {
-                signIn(
+                AuthOperations.signIn(
                   email: emailController.text.trim(),
                   password: passwordController.text.trim(),
                 );
@@ -57,9 +55,4 @@ class _LoginPageState extends State<LoginPage> {
       ),
     )));
   }
-}
-
-Future signIn({required String email, required String password}) async {
-  await FirebaseAuth.instance
-      .signInWithEmailAndPassword(email: email, password: password);
 }
