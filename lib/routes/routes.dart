@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_estagio/pages/welcome_page.dart';
+import 'package:projeto_estagio/pages/login_page.dart';
 
 class Routes extends StatelessWidget {
   const Routes({Key? key}) : super(key: key);
@@ -11,11 +11,11 @@ class Routes extends StatelessWidget {
       onGenerateRoute: (settings) {
         if (settings.name == '/') {
           return MaterialPageRoute(builder: (context) {
-            return WelcomePage();
+            return LoginPage();
           });
         }
         return MaterialPageRoute(builder: (context) {
-          return WelcomePage();
+          return LoginPage();
         });
       },
     );
