@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086037181567",
+    "project_id": "travel-partner-1ae5b",
+    "storage_bucket": "travel-partner-1ae5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086037181567:android:0c432a80a7f225bab16b4a",
+        "android_client_info": {
+          "package_name": "com.example.projeto_estagio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086037181567-fnpv9teau27kh1d0l8g7nr7ijqap4o62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlWkedrXxn7scxSo32ivojV5HwD-tIBKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086037181567-fnpv9teau27kh1d0l8g7nr7ijqap4o62.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
