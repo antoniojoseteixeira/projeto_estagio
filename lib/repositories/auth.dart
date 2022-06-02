@@ -11,4 +11,12 @@ class AuthRepository {
       throw Error();
     }
   }
+
+  static signOut() {
+    try {
+      AuthOperations.signOut();
+    } catch (err) {
+      throw Error();
+    }
+  }
 }
